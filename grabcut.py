@@ -44,7 +44,7 @@ class GrabCut:
             self.x = min(self.x, x)
             self.y = min(self.y, y)
             self.image = self.original_image.copy()
-            if self.x == x and self.y == y:
+            if self.x == x or self.y == y:
                 cv2.rectangle(self.image, (self.x, self.y), (self.x + self.w, self.y + self.h), [255, 0, 0], 2)
             else:
                 cv2.rectangle(self.image, (self.x, self.y), (x, y), [255, 0, 0], 2)
